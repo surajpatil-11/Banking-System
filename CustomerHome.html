@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title> Online Banking </title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+    <div class = "row text-center" style = "background-color:#6d7fcc;" >
+            <h1  class="col-12"> Online Banking </h1>
+    </div>
+    <div class="wrapper">
+       
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+        	<!-- sidebar heading start -->
+            <div class="sidebar-header">
+                <h3> Customer </h3>
+            </div>
+            <!-- sidebar heading end -->
+
+            <ul class="list-unstyled components">
+             
+                <li class="active">
+                    <a id="E-Passbook" >  E-Passbook  </a>
+                </li>
+                <li class="active">
+                    <a id="transferMoney" >  Transfer money  </a>
+                </li>
+                <li class="active">
+                    <a id="changePassword" >  Change Password  </a>
+                </li>
+
+
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id = "headbar">
+
+             <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    
+                    <!-- Toggle button start -->
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <!-- Toggle button end -->
+
+
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#"> Logout </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div id="content"></div>
+        </div>
+
+    </div>
+    
+
+
+
+<!----------------------------------------------------------------------
+                        E-Passbook
+------------------------------------------------------------------------>
+
+<div id="showE-Passbook" class="table-responsive">
+        <input id="myInput" type="text" placeholder="Search..">
+        <h3 align="center"> Customers </h3>
+        <table class="table table-bordered table-stripped" >
+            <tr>
+                <th> Date  </th>
+                <th> Particulars </th>
+                <th> Debit (withdrawals) </th>
+                <th> Credit (deposits) </th>
+                <th> Balance </th>
+                
+            </tr>
+            
+            <tr>
+                <td>  21-01-2020  </td>
+                <td>  Balance Brought Forward  </td>
+                <td>    </td>
+                <td>    </td>
+                <td>  60000  </td>
+            </tr>
+            <tr>
+                <td>  25-01-2020  </td>
+                <td>  Interest Credit  </td>
+                <td>    </td>
+                <td>  300  </td>
+                <td>  60300  </td>
+            </tr>
+            <tr>
+                <td>  26-01-2020  </td>
+                <td>  Service charge  </td>
+                <td>  100 </td>
+                <td>    </td>
+                <td>  60200  </td>
+            </tr>
+            
+        </table>
+</div>
+
+
+
+<!---------------------------------------------------------------------->
+
+
+
+
+<!----------------------------------------------------------------------
+                        Transfer money
+----------------------------------------------------------------------->
+<div id="showTransferMoney">
+<form method="post">
+    <div class="container register">
+        <label ><b> Transfer to A/C no. </b></label> <br>
+        <input type="text" name="account" required/>
+
+        <label ><b> Payment Amount </b></label> <br>
+        <input type="text" name="amount" required/>
+
+        <label ><b> Payment Remark </b></label> <br>
+        <input type="text" name="remark" required/>
+
+        <button type="submit" class="registerbtn"  ><b> Pay </b></button>
+
+
+    </div>
+</form>
+</div>
+
+
+
+<!--------------------------------------------------------------------->
+
+
+
+
+<!----------------------------------------------------------------------
+                        Change Password
+----------------------------------------------------------------------->
+
+ <div id="showChangePassword">
+<form method="post">
+    <div class="container register">
+        <label for="transferTo"><b> Current Password </b></label> <br>
+        <input type="text" name="account" required/>
+
+        <label for="transferTo"><b> New Password </b></label> <br>
+        <input type="text" name="amount" required/>
+
+        <label for="transferTo"><b> Confirm Password </b></label> <br>
+        <input type="text" name="remark" required/>
+
+        <button type="submit" class="registerbtn"  ><b> Change Password </b></button>
+
+
+    </div>
+</form>
+</div>
+
+
+
+<!--------------------------------------------------------------------->
+
+
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+        $("#E-Passbook").click(function(){
+            $("#content").html( $("#showE-Passbook").html() );
+        });
+        $("#showE-Passbook").hide() ;
+
+        $("#transferMoney").click(function(){
+            $("#content").html( $("#showTransferMoney").html() );
+        });
+        $("#showTransferMoney").hide() ;
+
+        $("#changePassword").click(function(){
+            $("#content").html( $("#showChangePassword").html() );
+        });
+        $("#showChangePassword").hide() ;
+
+     
+  
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active') ;
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
